@@ -1,0 +1,44 @@
+.color-purple {
+    color: #5956E9;
+}
+
+.bg-purple {
+    background-color: #5956E9;
+}
+
+form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .input-box {
+        background-color: #EFF1F9;
+        margin-top: 16px;
+        border-radius: 8px;
+        padding: 8px 12px;
+
+        label {
+            color: #5956E9;
+            font-size: 14px;
+            width: 100%;
+            padding: 0 0 0 8px;
+        }
+
+        input,
+        textarea {
+            background-color: #EFF1F9;
+            color: #272c32;
+            width: 100%;
+            padding: 0 0 3px 10px;
+            font-weight: 400;
+            border: none;
+            border-bottom: 1px solid #afb4b977;
+            transition: all .2s ease;
+
+            &:focus {
+                outline: none !important;
+                border-bottom: 1px solid #5956E9;
+            }
+        }
+    }
+}
