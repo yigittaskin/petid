@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <Homepage />,
   },
   {
-    path: "/app/:id",
+    path: "app/:id",
     element: <PetID />,
   },
 ]);
