@@ -1,6 +1,6 @@
 # Evcil Hayvanlarınızın Güvenliği için PETID!
 
-[https://petid-sigma.vercel.app](https://petid-sigma.vercel.app).
+[https://petid-sigma.vercel.app](https://petid-sigma.vercel.app) -> Landing Page
 
 ## Kullanılan Teknolojiler:
 React, CSS, SCSS/SASS, API, Router, HTML
