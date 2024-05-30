@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header'
 import '../style/homepage.scss'
 import HeroImage from '../images/hero.svg'
@@ -9,6 +9,37 @@ import FeaturesImage from '../images/features.svg'
 import Footer from '../components/Footer'
 
 const Homepage = () => {
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e) => {
+      // Önceden belirlenmiş olayı durdur
+      e.preventDefault();
+      // Prompt olayını kaydet
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallClick = () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        setDeferredPrompt(null);
+      });
+    }
+  };
+
   return (
     <>
       <Header page='HomePage' />
@@ -23,8 +54,8 @@ const Homepage = () => {
                   <p className='mt-3'>PetID, temel amaç olarak evcil hayvan sahipleri için hayvanlarının kaybolması veya acil durumlarda hızlı ve kolay bilgiye erişim sağlayan bir çözüm sunar.</p>
                   <div className='hero-download-box'>
                     <h4 className='mt-4 mb-2'>Şimdi İndir</h4>
-                    <a href='/'><img src={GooglePlay} alt='Google Play' /></a>
-                    <a href='/'><img src={AppleStore} alt='Apple Store' /></a>
+                    <button id="install-app" onClick={handleInstallClick}><img src={GooglePlay} alt='Google Play' /></button>
+                    <button id="install-app" onClick={handleInstallClick}><img src={AppleStore} alt='Apple Store' /></button>
                   </div>
                 </div>
               </div>
