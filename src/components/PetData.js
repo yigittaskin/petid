@@ -109,10 +109,10 @@ const PetData = (props) => {
               </div>
             </div>
             <div className='call-owner mt-4'>
-              <a href='/'>SAHİBİMİ ARA <img src={Phone} alt='Telefon' /></a>
+              <a href={`tel:${petData.owner_phone}`}>SAHİBİMİ ARA <img src={Phone} alt='Telefon' /></a>
             </div>
             <div className='wp-owner mt-3'>
-              <a href='/'>WHATSAPP'TAN YAZ <img src={Whatsapp} alt='Whatsapp' /></a>
+              <a href={`https://wa.me/+90${petData.owner_phone}/?text=Merhaba`} target='_blank'>WHATSAPP'TAN YAZ <img src={Whatsapp} alt='Whatsapp' /></a>
             </div>
           </div>
           <div className='vet-info container-fluid mt-4'>
