@@ -1,7 +1,7 @@
 # Evcil Hayvanlarınızın Güvenliği için PETID!
 
-[https://petid-sigma.vercel.app](https://petid-sigma.vercel.app) -> Landing Page (Tanıtım Sayfası)
-[https://petid-sigma.vercel.app/app/mami](https://petid-sigma.vercel.app/app/mami) -> Örnek Evcil Hayvan Sayfası
+[https://petid-sigma.vercel.app](https://petid-sigma.vercel.app) -> Landing Page (Tanıtım Sayfası) <br>
+[https://petid-sigma.vercel.app/app/mami](https://petid-sigma.vercel.app/app/mami) -> Örnek Evcil Hayvan Sayfası <br>
 [https://petid-sigma.vercel.app/app/randomId](https://petid-sigma.vercel.app/app/randomId) -> randomId kısmına istediğiniz id'yi yazarak Evcil Hayvan Tanımlama sayfasına ulaşabilirsiniz.
 
 ## Kullanılan Teknolojiler:
